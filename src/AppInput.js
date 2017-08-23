@@ -17,7 +17,6 @@ render(){
     <div className="inputWrapper">
     <h3>Enter a location to search Air Quality</h3>
     <div className="searchArea">
-    <center>
     <form>
     <input type="text"
     placeholder="Enter location"
@@ -25,7 +24,9 @@ render(){
     onChange={this.handleLocationTextInputChange}
     />
   </form>
-    </center>
+    <button >
+      Submit
+    </button>
   </div>
   </div>
   ) //end return
