@@ -9,19 +9,20 @@ import './App.css';
 
 
 class App extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
-      locationText: ''
-  };
+      locationText: this.props.location, //change later to blank (so input will be set as location)
+    };
 
-  this.handleLocationTextInput =
-  this.handleLocationTextInput.bind(this); //bind current this(of constructor)
-  // to handler, so this will always refer to current object
-}
+    this.handleLocationTextInput =
+    this.handleLocationTextInput.bind(this); //bind current this(of constructor)
+    // to handler, so this will always refer to current object
+  }
+
   handleLocationTextInput(locationText){ //handler function that updates state
   this.setState({
-    locationText: locationText
+    locationText: this.state.locationText
   });
 }
 
@@ -32,23 +33,28 @@ class App extends Component {
           <h1>Air Quality Index Finder</h1>
         </div>
         <div className="appinput">
-        <AppInput
-          locationText={this.state.locationText}
-          onLocationTextInput={this.handleLocationTextInput}
-        />
-      </div>
-      <div className="displaytable">
-        <DisplayTable
-          locationText={this.state.locationText}
-        />
-      </div>
-      <div className="displayhistorytable">
-        <DisplayHistoryTable />
+          <AppInput
+            //locationText={this.state.locationText}
+            //onLocationTextInput={this.handleLocationTextInput}
+          />
+        </div>
+        <div className="displaytable">
+          <DisplayTable
+            //locationText={this.state.locationText}
+            data={this.props.data}
+            //props because nothing is being set to state yet
+          />
+        </div>
+        <div className="displayhistorytable">
+          <DisplayHistoryTable />
         </div>
       </div>
     );
   }
 }
 
+var DATA= [
+  {location: 'Austin, TX', AQI: '51', color: '#F8FC02', time: new Date()}
+];
 
 export default App;
