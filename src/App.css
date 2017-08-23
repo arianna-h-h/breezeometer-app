@@ -1,0 +1,60 @@
+
+.wrapper{
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  background-color: #031634;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.appinput {
+  height: 150px;
+  color: white;
+  background-color: #033649;
+  text-align: center;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-flow: column;
+  padding: 50px;
+}
+
+.searchArea {
+}
+
+.displaytable{
+  height: 150px;
+  background-color: #036564;
+  display: flex;
+  padding: 20px;
+  font-size: large;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.displaySearch{
+  padding: 20px;
+}
+
+.displayhistorytable{
+  background-color: #CDB380;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.displayHistorySearch{
+  padding: 20px;
+}
