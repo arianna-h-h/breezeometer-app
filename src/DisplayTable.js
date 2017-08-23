@@ -4,8 +4,19 @@ import DisplayRowHead from './DisplayRowHead';
 
 
 class DisplayTable extends Component {
+/*  constructor(props){
+    super(props)
+    this.state = {
+      locationText: this.props.locationText,
+    };
+  }; */
 
   render() {
+    var row = [];
+
+    this.props.data.forEach((locat) => {
+      row.push(<DisplayRowHead location={locat.location} key={locat.location} />)
+    });
     return (
       <div className='displaySearch'>
         <table>
@@ -13,7 +24,8 @@ class DisplayTable extends Component {
             <DisplayRowHead />
           </thead>
           <tbody>
-            <DisplayRow />
+          {row}
+
           </tbody>
         </table>
       </div>
